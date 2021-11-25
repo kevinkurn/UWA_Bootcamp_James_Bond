@@ -13,7 +13,7 @@ d3.json("/api/get_bond_votes").then(pollData=>{
       const pollOptionValue = pollOptionInput.value;
       console.log(pollOptionValue)
       pollData.find(pollOption => pollOption.option === pollOptionValue).votes++;
-      // window.location.replace(`https://bond-james.herokuapp.com/${pollOptionValue}`)
+      window.location.replace(`https://uwa-bootcamp-2021-james-bond.herokuapp.com/${pollOptionValue}`)
       pollChart.data.datasets[0].data = pollData.map(pollOption => pollOption.votes);
       pollChart.update();
       pollForm.reset();
